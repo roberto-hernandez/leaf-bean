@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 224627166283335368}
   - component: {fileID: 222166559721940482}
   - component: {fileID: 114708108679964076}
+  - component: {fileID: 114509626048692964}
   m_Layer: 5
   m_Name: MenuItem
   m_TagString: Untagged
@@ -198,6 +199,18 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Turret
+--- !u!114 &114509626048692964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1211952681007522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd45a28880ad2a4fba342c11b32f3e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 1490508642275664, guid: befe5c46726d72443aa4b45c843958ba, type: 2}
 --- !u!114 &114708108679964076
 MonoBehaviour:
   m_ObjectHideFlags: 1

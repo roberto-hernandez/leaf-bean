@@ -22,3 +22,6 @@ Unity Game
 * [ ] Build System
 	* [ ] Cancel build & return to shop
 	* [ ] Place Item & finilizae order
+	
+## Task List
+* [ ] Create Order Domain
