@@ -53,8 +53,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Application\Actions\RoundSystem.cs" />
      <Compile Include="Assets\Scripts\Application\Actions\Shop\BuyShopItem.cs" />
      <Compile Include="Assets\Scripts\Application\Actions\Shop\LoadShop.cs" />
+     <Compile Include="Assets\Scripts\Application\Actions\Shop\Storefront.cs" />
      <Compile Include="Assets\Scripts\BuildItem.cs" />
      <Compile Include="Assets\Scripts\Weapons\Turret.cs" />
  <Reference Include="UnityEditor.StandardEvents">

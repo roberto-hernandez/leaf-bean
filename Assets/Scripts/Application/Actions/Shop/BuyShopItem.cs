@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class BuyShopItem : MonoBehaviour {
     public GameObject itemPrefab;
+    public Canvas menuCanvasGO;
 
     // Use this for initialization
     void Start () {

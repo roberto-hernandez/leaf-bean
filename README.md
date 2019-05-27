@@ -3,7 +3,15 @@ Unity Game
 
 ## Feature List
 * [ ] Round System
-	* [ ] Switch rounds when timer ends.
+	* [ ] When timer ends
+		* [ ] In prepare phase
+			* [ ] Destroy orders which aren't finalized
+			* [x] Close menu
+			* [x] Start battle pahse
+		* [ ] In battle phase
+			* [ ] Clear out enemies
+			* [x] Open Menu
+	* [x] Display timmer
 * [ ] Shopping System
 	* [ ] Exit menu
 		* [ ] Prompt user to start battle phase

@@ -10,6 +10,7 @@ public class LoadShop : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        var enabled = canvas.enabled;
         canvas.enabled = false;
         
         var shop = ShopFactory.Create();
@@ -18,7 +19,7 @@ public class LoadShop : MonoBehaviour {
             AddShopItem(item);
         }
 
-        canvas.enabled = true;
+        canvas.enabled = enabled;
     }
 	
 	// Update is called once per frame
