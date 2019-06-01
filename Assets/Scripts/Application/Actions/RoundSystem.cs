@@ -16,14 +16,27 @@ public class RoundSystem : MonoBehaviour {
         canvas.enabled = true;
         phase = new PreparePhase();
         phase.Start();
-	}
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
         if(phase.HasEnded())
         {
+            var worldManager = WorldManager.GetInstance();
+            if(phase is PreparePhase)
+            {
+                Destroy(worldManager.itemInstance);
+                worldManager.AddEnemy();
+            }
+            else
+            {
+                worldManager.DestroyEnemies();
+            }
+
             phase = phase.Next();
             phase.Start();
+            worldManager.inBattleMode = phase is BattlePhase;
         }
 
         textGO.text = phase.TimeRemaining().ToString();
@@ -87,6 +100,7 @@ class PreparePhase : Phase
         canvas.enabled = false;
 
         // todo: close prefab instance
+        var worldManager = WorldManager.GetInstance();
 
         return new BattlePhase();
     }

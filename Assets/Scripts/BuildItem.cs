@@ -9,6 +9,10 @@ public class BuildItem : MonoBehaviour {
 	void Start () {
         gameObject.transform.position = new Vector3();
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+
+        var worldManager = GameObject.Find("WorldManager").GetComponent<WorldManager>();
+        worldManager.itemInstance = gameObject;
+        
     }
 	
 	// Update is called once per frame
@@ -18,18 +22,13 @@ public class BuildItem : MonoBehaviour {
 
         if(Input.GetKeyDown(KeyCode.Mouse0))
         {
-            if(IsValidPlacement())
-            {
-                OpenMenu();
-                Destroy(this);
-            }
+            OpenMenu();
+            var worldManager = WorldManager.GetInstance();
+            worldManager.itemInstance = null;
+            worldManager.SubtractMoney(100);
+            Destroy(this);   
         }
 	}
-
-    bool IsValidPlacement()
-    {
-        return true;
-    }
 
     void OpenMenu()
     {

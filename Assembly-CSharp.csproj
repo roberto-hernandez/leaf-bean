@@ -58,7 +58,10 @@
      <Compile Include="Assets\Scripts\Application\Actions\Shop\LoadShop.cs" />
      <Compile Include="Assets\Scripts\Application\Actions\Shop\Storefront.cs" />
      <Compile Include="Assets\Scripts\BuildItem.cs" />
+     <Compile Include="Assets\Scripts\Weapons\Bullet.cs" />
+     <Compile Include="Assets\Scripts\Weapons\Enemy.cs" />
      <Compile Include="Assets\Scripts\Weapons\Turret.cs" />
+     <Compile Include="Assets\Scripts\WorldManager.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/rober/GameProjects/leaf-bean/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

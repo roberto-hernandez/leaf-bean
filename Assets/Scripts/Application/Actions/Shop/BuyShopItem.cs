@@ -16,10 +16,14 @@ public class BuyShopItem : MonoBehaviour {
 
     void BuyItemAction()
     {
-        var canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
-        canvas.enabled = false;
+        var worldManager = WorldManager.GetInstance();
+        if(worldManager.GetMoney() >= int.Parse(gameObject.GetComponentInChildren<Transform>().Find("MenuItemCost").gameObject.GetComponent<Text>().text))
+        {
+            var canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+            canvas.enabled = false; 
 
-        var itemName = gameObject.GetComponentInChildren<Transform>().Find("MenuItemName").gameObject.GetComponent<Text>().text;
-        Instantiate(itemPrefab);
+            var itemName = gameObject.GetComponentInChildren<Transform>().Find("MenuItemName").gameObject.GetComponent<Text>().text;
+            var itemGo = Instantiate(itemPrefab);
+        }
     }
 }

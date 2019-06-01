@@ -42,7 +42,6 @@ class ShopFactory
         var shop = new Shop();
         shop.AddItem(new ShopItem() { Name = "Turret", Cost = 100 });
         shop.AddItem(new ShopItem() { Name = "Missile Launcher", Cost = 300 });
-        // shop.AddItem(new ShopItem() { Name = "Health", Cost = "10%" });
         return shop;
     }
 }
